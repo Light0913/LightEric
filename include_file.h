@@ -3,4 +3,8 @@
 using namespace std;
 string make_password(string p);
 string de_password(string p);
+void color(int ForgC, int BackC);
+void info(string a);
+void error(string a);
+void warn(string a);
 #endif

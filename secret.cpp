@@ -2,6 +2,7 @@
 #include"include_file.h"
 using namespace std;
 //此内容绝密！！！
+//制作密码 
 //{ 
 string make_password(string p){//密码加密 （凯撒加密法）
 	string r="";

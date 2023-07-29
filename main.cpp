@@ -424,10 +424,13 @@ void start(){
 	}
 }
 void run(){
+	string gc;
 	
+	cout<<"ÇëÊäÈëÄãµÄÑ¡Ôñ:"<<endl;
+	cin>>gc;
 }
 int main() {
 	start();
-	run();
+	//run();
 	return 0;
 }

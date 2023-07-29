@@ -5,8 +5,8 @@ CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = LightEric_private.res
-OBJ      = main.o secret.o $(RES)
-LINKOBJ  = main.o secret.o $(RES)
+OBJ      = main.o secret.o game_run.o $(RES)
+LINKOBJ  = main.o secret.o game_run.o $(RES)
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -30,6 +30,9 @@ main.o: main.cpp
 
 secret.o: secret.cpp
 	$(CPP) -c secret.cpp -o secret.o $(CXXFLAGS)
+
+game_run.o: game_run.cpp
+	$(CPP) -c game_run.cpp -o game_run.o $(CXXFLAGS)
 
 LightEric_private.res: LightEric_private.rc 
 	$(WINDRES) -i LightEric_private.rc --input-format=rc -o LightEric_private.res -O coff 

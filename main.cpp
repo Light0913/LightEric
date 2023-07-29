@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #include<direct.h>
 #include<windows.h>
+#include"include_file.h"
 /*
 #include<iostream>
 #include<fstream>
@@ -60,23 +61,6 @@ void warn(string a){
 	cout<<"[×¢Òâ]"<<a<<endl;
 	color(15,0);
 } 
-//´ËÄÚÈÝ¾øÃÜ£¡£¡£¡
-//{ 
-string make_password(string p){//ÃÜÂë¼ÓÃÜ £¨¿­Èö¼ÓÃÜ·¨£©
-	string r="";
-	for(int i=0;i<p.size();i++){
-		r+=p[i]-23;
-	}
-	return r;
-}
-string de_password(string p){//ÃÜÂë½âÃÜ £¨¿­Èö½âÃÜ·¨£© 
-	string r="";
-	for(int i=0;i<p.size();i++){
-		r+=p[i]+23;
-	}
-	return r;
-}
-//}
 void command(string c){
 	if(c[0]=='/'){
 		if(admin){

@@ -7,4 +7,6 @@ void color(int ForgC, int BackC);
 void info(string a);
 void error(string a);
 void warn(string a);
+unsigned long long make_money(unsigned long long m);
+unsigned long long de_money(unsigned long long m);
 #endif

@@ -5,19 +5,19 @@
 #define LIGHTERIC_PRIVATE_H
 
 /* VERSION DEFINITIONS */
-#define VER_STRING	"1.1.0.6"
+#define VER_STRING	"1.1.0.36"
 #define VER_MAJOR	1
 #define VER_MINOR	1
 #define VER_RELEASE	0
-#define VER_BUILD	6
+#define VER_BUILD	36
 #define COMPANY_NAME	""
-#define FILE_VERSION	"1.1.0.6"
+#define FILE_VERSION	"1.1.0.36"
 #define FILE_DESCRIPTION	"C++×ÔÖÆ³ÌÐò"
 #define INTERNAL_NAME	""
 #define LEGAL_COPYRIGHT	""
 #define LEGAL_TRADEMARKS	""
 #define ORIGINAL_FILENAME	""
 #define PRODUCT_NAME	"LightEric"
-#define PRODUCT_VERSION	"1.1.0.6"
+#define PRODUCT_VERSION	"1.1.0.36"
 
 #endif /*LIGHTERIC_PRIVATE_H*/

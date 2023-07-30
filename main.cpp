@@ -389,7 +389,7 @@ void start(){
 	
 	system("cls");
 	color(15,0);
-	system("title LightEric莱特    [v1.1.0]    版权归Light_LE所有");
+	system("title LightEric莱特    [v1.2.0.36]    版权归Light_LE所有");
 	
 	ifstream f("./data.dat",ios::binary);//检测文件是否存在 
 	if(not(f.is_open())){

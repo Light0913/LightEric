@@ -33,20 +33,20 @@ UnitCount=4
 
 [VersionInfo]
 Major=1
-Minor=1
+Minor=2
 Release=0
 Build=37
 LanguageID=2052
 CharsetID=1252
 CompanyName=
-FileVersion=1.1.0.37
+FileVersion=1.2.0.37
 FileDescription=C++×ÔÖÆ³ÌÐò
 InternalName=
 LegalCopyright=
 LegalTrademarks=
 OriginalFilename=
 ProductName=LightEric
-ProductVersion=1.1.0.37
+ProductVersion=1.2.0.37
 AutoIncBuildNr=1
 SyncProduct=1
 

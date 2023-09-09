@@ -9,4 +9,5 @@ void error(string a);
 void warn(string a);
 unsigned long long make_money(unsigned long long m);
 unsigned long long de_money(unsigned long long m);
+unsigned long long game_run(string g,unsigned long long m);
 #endif

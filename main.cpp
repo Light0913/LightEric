@@ -11,11 +11,12 @@
 */
 using namespace std;
 
+string creat_agreement;
 char username[20]="";
 char password[30]="";
 bool admin=0;//是否为管理员 
 bool command_ran=0;//命令是否成功运行 （ran是run的过去式） 
-unsigned long long money=100;
+unsigned long long money;
 
 //储存用户数据./users/data/{用户名username}.dat
 //{
@@ -346,7 +347,7 @@ void l(){//登录
 					system("cls");
 					info("登陆成功！");
 					f1.close();
-					cout<<"欢迎回来"<<username<<endl;
+					cout<<"欢迎回来    "<<username<<endl;
 					system("pause");//暂停
 				}
 				else{
@@ -374,7 +375,7 @@ void l(){//登录
 void creatfile(string path){//获创建文件夹 
 	mkdir(path.c_str());
 }
-string creat_agreement;
+void run();
 void start(){
 	ifstream fa("./set_admin.txt");
 	if(fa.is_open()){
@@ -389,7 +390,7 @@ void start(){
 	
 	system("cls");
 	color(15,0);
-	system("title LightEric莱特    [v1.2.0.36]    版权归Light_LE所有");
+	system("title LightEric莱特    [v1.2.0]    版权归Light_LE所有");
 	
 	ifstream f("./data.dat",ios::binary);//检测文件是否存在 
 	if(not(f.is_open())){
@@ -466,15 +467,46 @@ void start(){
 			goto c;
 		}
 	}
+	run();
 }
 void run(){
-	string gc;
+	//制作用户信息 
+	//{ 
+	char *n111="./users/data/";
+	char *n222=username;
+	char temp111[29];
+	strcpy(temp111,n111);
+	strcat(temp111,n222);
+	char *n333=temp111;
+	char *n444=".dat";
+	char temp222[33];
+	strcpy(temp222,n333);
+	strcat(temp222,n444);
+	//}
+	ifstream f;
+	f.open(temp222,ios::binary);
+	if(f.is_open()){
+		f.read((char*)&userdata,sizeof(userdata));
+		f.close();
+		money=de_money(userdata.money);
+	}
 	
-	cout<<"请输入你的选择:"<<endl;
+	run:
+	system("cls");
+	string gc;
+	color(10,0);
+	cout<<"[信息]你的积分"<<money<<endl;
+	color(15,0);
+	info("项目列表：");
+	cout<<"{1}任意进制转换{所需积分：10}"<<endl;
+	cout<<"请输入你的选择（序号）>>>";
 	cin>>gc;
+	system("cls");
+	money=game_run(gc,money);
+	system("pause");
+	goto run;
 }
 int main() {
 	start();
-	//run();
 	return 0;
 }
